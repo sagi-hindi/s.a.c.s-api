@@ -19,8 +19,7 @@ var orders_controller_1 = __importDefault(require("./06-controllers/orders-contr
 var path_1 = __importDefault(require("path"));
 dal_1.default.connect();
 var server = (0, express_1.default)();
-if (config_1.default.isDevelopment)
-    server.use((0, cors_1.default)());
+server.use((0, cors_1.default)());
 server.use(express_1.default.json());
 server.use((0, express_fileupload_1.default)());
 server.use("/api/auth", auth_controller_1.default);
